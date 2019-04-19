@@ -1,0 +1,61 @@
+<h1>Add music</h1>
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+ <h5 *ngIf="success">Your form is valid!</h5>
+ <label>
+ title:
+ <input type="text" formControlName="title">
+ <div *ngIf="submitted &&
+messageForm.controls.title.errors" class="error">
+ <div
+*ngIf="messageForm.controls.title.errors.required">The title is
+required</div>
+ </div>
+ </label>
+
+ <label>
+ writers:
+ <textarea formControlName="writers"></textarea>
+ <div *ngIf="submitted &&
+messageForm.controls.writers.errors" class="error">
+ <div
+*ngIf="messageForm.controls.writers.errors.required">Writers are
+required</div>
+ </div>
+ </label>
+
+ <label>
+  singer:
+  <input type="text" formControlName="singer">
+  <div *ngIf="submitted &&
+ messageForm.controls.singer.errors" class="error">
+  <div
+ *ngIf="messageForm.controls.singer.errors.required">The singer is
+ required</div>
+  </div>
+  </label>
+
+ <label>
+  language:
+ <textarea formControlName="language"></textarea>
+ <div *ngIf="submitted &&
+messageForm.controls.language.errors" class="error">
+ <div
+*ngIf="messageForm.controls.language.errors.required">language is
+required</div>
+ </div>
+ </label>
+
+ <label>
+  isrc:
+ <textarea formControlName="isrc"></textarea>
+ <div *ngIf="submitted &&
+messageForm.controls.isrc.errors" class="error">
+ <div
+*ngIf="messageForm.controls.isrc.errors.required">isrc is
+required</div>
+ </div>
+ </label>
+
+ <input type="submit" value="Send information" class="cta">
+
+ </form>

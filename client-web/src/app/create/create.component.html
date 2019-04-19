@@ -1,0 +1,7 @@
+<h1 [class.gray]="h1Style">Music</h1>
+<ul *ngIf="music">
+ <li *ngFor="let music of music">
+ <h3>{{ music.title }} </h3>
+ <p>{{ music.singer}} </p>
+ </li>
+</ul>
