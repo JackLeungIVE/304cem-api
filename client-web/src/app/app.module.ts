@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
-import { CreateComponent } from './create/create.component';
+import { GetComponent } from './get/get.component';
 import { ChangeComponent } from './change/change.component';
 import { DeleteComponent } from './delete/delete.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,7 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     NavComponent,
-    CreateComponent,
+    GetComponent,
     ChangeComponent,
     DeleteComponent
   ],

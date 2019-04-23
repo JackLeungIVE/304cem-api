@@ -1,13 +1,13 @@
 <h1>Add music</h1>
-<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="angForm" (ngSubmit)="onSubmit()">
  <h5 *ngIf="success">Your form is valid!</h5>
  <label>
  title:
  <input type="text" formControlName="title">
  <div *ngIf="submitted &&
-messageForm.controls.title.errors" class="error">
+angForm.controls.title.errors" class="error">
  <div
-*ngIf="messageForm.controls.title.errors.required">The title is
+*ngIf="angForm.controls.title.errors.required">The title is
 required</div>
  </div>
  </label>
@@ -16,9 +16,9 @@ required</div>
  writers:
  <textarea formControlName="writers"></textarea>
  <div *ngIf="submitted &&
-messageForm.controls.writers.errors" class="error">
+angForm.controls.writers.errors" class="error">
  <div
-*ngIf="messageForm.controls.writers.errors.required">Writers are
+*ngIf="angForm.controls.writers.errors.required">Writers are
 required</div>
  </div>
  </label>
@@ -27,9 +27,9 @@ required</div>
   singer:
   <input type="text" formControlName="singer">
   <div *ngIf="submitted &&
- messageForm.controls.singer.errors" class="error">
+ angForm.controls.singer.errors" class="error">
   <div
- *ngIf="messageForm.controls.singer.errors.required">The singer is
+ *ngIf="angForm.controls.singer.errors.required">The singer is
  required</div>
   </div>
   </label>
@@ -38,9 +38,9 @@ required</div>
   language:
  <textarea formControlName="language"></textarea>
  <div *ngIf="submitted &&
-messageForm.controls.language.errors" class="error">
+angForm.controls.language.errors" class="error">
  <div
-*ngIf="messageForm.controls.language.errors.required">language is
+*ngIf="angForm.controls.language.errors.required">language is
 required</div>
  </div>
  </label>
@@ -49,13 +49,29 @@ required</div>
   isrc:
  <textarea formControlName="isrc"></textarea>
  <div *ngIf="submitted &&
-messageForm.controls.isrc.errors" class="error">
+angForm.controls.isrc.errors" class="error">
  <div
-*ngIf="messageForm.controls.isrc.errors.required">isrc is
+*ngIf="angForm.controls.isrc.errors.required">isrc is
 required</div>
  </div>
  </label>
 
- <input type="submit" value="Send information" class="cta">
+ <div class="form-group">
+  <button (click)="addBusiness(title.value, writers.value, singer.value, language.value, isrc.value)"
+  [disabled]="angForm.pristine || angForm.invalid" 
+  class="btn btn-primary">Add Music</button>
+</div>
 
  </form>
+ <div *ngIf="submitted" class="results">
+ <strong>title:</strong>
+ <span>{{ angForm.controls.title.value }}</span>
+ <strong>writers:</strong>
+ <span>{{ angForm.controls.writers.value }}</span>
+ <strong>singer:</strong>
+ <span>{{ angForm.controls.singer.value }}</span>
+ <strong>language:</strong>
+ <span>{{ angForm.controls.language.value }}</span>
+ <strong>isrc:</strong>
+ <span>{{ angForm.controls.isrc.value }}</span>
+ </div>

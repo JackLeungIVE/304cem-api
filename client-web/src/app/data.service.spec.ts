@@ -5,7 +5,7 @@ import { DataService } from './data.service';
 describe('DataService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
+  it('should be get', () => {
     const service: DataService = TestBed.get(DataService);
     expect(service).toBeTruthy();
   });

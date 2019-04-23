@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.scss']
+  selector: 'app-get',
+  templateUrl: './get.component.html',
+  styleUrls: ['./get.component.scss']
 })
-export class CreateComponent implements OnInit {
+export class GetComponent implements OnInit {
   
   music: Object;
 
