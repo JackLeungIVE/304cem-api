@@ -14,6 +14,8 @@ export class DataService {
   getMusic() {
     return this.http.get('http://localhost:5000/all')
     }
+
+
   putMusic(title:string, singer:string, writers:string, language:string, isrc:string){
     const httpOptions = new  HttpHeaders()
     // .set('Accept','application/json') 
@@ -30,6 +32,8 @@ export class DataService {
           retry(1)
         )
   }
+
+  
   addMusic(title:string, singer:string, writers:string, language:string, isrc:string){
 
     const httpOptions = new  HttpHeaders()
