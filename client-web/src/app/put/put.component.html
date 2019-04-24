@@ -1,0 +1,11 @@
+<h1 [class.gray]="h1Style">Edit Music</h1>
+<ul *ngIf="music">
+ <li *ngFor="let music of music">
+ <h3>{{ music.title }} </h3>
+ <p>Writers: {{ music.writers}} </p>
+ <p>Singer: {{ music.singer}} </p>
+ <p>Language: {{ music.language}} </p>
+ <p>Isrc: {{ music.isrc}} </p>
+ <input type="submit" value="Edit" class="cta">
+ </li>
+</ul>

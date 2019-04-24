@@ -9,6 +9,7 @@ import { ChangeComponent } from './change/change.component';
 import { DeleteComponent } from './delete/delete.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PutComponent } from './put/put.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavComponent,
     GetComponent,
     ChangeComponent,
-    DeleteComponent
+    DeleteComponent,
+    PutComponent
   ],
   imports: [
     BrowserModule,
